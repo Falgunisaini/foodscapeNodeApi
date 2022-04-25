@@ -149,7 +149,8 @@ app.patch('/updateOrder/:id',(req,res)=>{
         {$set:{
             "status":status,
             "bank_name":req.body.bank_name,
-            "bank_status":req.body.bank_status
+            "bank_status":req.body.bank_status,
+            "date":req.body.date
         }}
         ,(err,result)=>{
         if(err) throw err;
